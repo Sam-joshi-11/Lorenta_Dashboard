@@ -786,7 +786,7 @@
         // This CSV is a PER-FILE export (one row per uploaded file/print job).
         // Multiple rows can share the same session_id; session-level fields
         // (status, total_amount, total_sheets, etc.) repeat across those rows.
-        const csvText = await fetch('data/merged_uploads (1).csv').then(r => r.text());
+        const csvText = await fetch('merged_uploads (1).csv').then(r => r.text());
         const lines = csvText.trim().split('\n').map(l => l.replace(/\r$/, ''));
         const headers = parseCSVLine(lines[0]);
 
